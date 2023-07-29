@@ -1,6 +1,6 @@
 ## Welcome! 👋
 
-OPD Application -> Backend
+Shopify -> Backend
 
 ## Overview
 
