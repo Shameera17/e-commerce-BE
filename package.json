@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "node ./dist/server.js",
-    "build": "npx tsc",
+    "build": "tsc -p .",
     "dev": "nodemon ./src/server.ts"
   },
   "devDependencies": {
