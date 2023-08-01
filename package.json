@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "node ./build/server.js",
-    "build": "tsc -p",
+    "build": "tsc",
     "dev": "nodemon ./src/server.ts"
   },
   "devDependencies": {
