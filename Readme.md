@@ -36,7 +36,8 @@ Project structure
 * typescript globally
 
 1. save the file locally -> Clone the repository
-   [Backend](https://github.com/Shameera17/e-commerce-FE)
+   [Backend](https://github.com/Shameera17/e-commerce-BE)
 2. installation -> npm install or yarn install
 3. install ts > js transpiler -> tsc --init
 4. run the app -> npm run dev or yarn dev
+5. Visit [FrontEnd](https://github.com/Shameera17/e-commerce-FE) repository
