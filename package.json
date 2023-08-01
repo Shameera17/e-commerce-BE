@@ -26,8 +26,8 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "start": "node ./dist/server.js",
-    "build": "tsc -p .",
+    "start": "node ./dist/src/server.js",
+    "build": "tsc",
     "dev": "nodemon ./src/server.ts"
   },
   "devDependencies": {
