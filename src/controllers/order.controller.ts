@@ -14,7 +14,7 @@ const createOrder = asyncHandler(async (request, response) => {
 
     const order: IOrder = {
       productId: new ObjectId(productId),
-      quantity: 0,
+      quantity: data?.quantity,
       sellerId: new ObjectId(sellerId),
       status: "ACTIVE",
       paymentStatus: null,
