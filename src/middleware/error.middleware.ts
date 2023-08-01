@@ -1,4 +1,5 @@
-import { Request, Response, NextFunction } from "express";
+import { NextFunction, Request, Response } from "express";
+import { HttpStatusCode } from "../utils/statusCode";
 
 // catch all for routes that does not exist
 const notFound = (req: Request, res: Response, next: NextFunction) => {
@@ -22,6 +23,9 @@ const errorHandler = (
   if (error.name === "CastError" && error.kind === "ObjectId") {
     statusCode === 404;
     message = "Resource not found";
+  } else if (error) {
+    statusCode = statusCode === 200 ? HttpStatusCode.BAD_REQUEST : statusCode;
+    message = `${error.message}`;
   }
 
   res.status(statusCode).json({
@@ -30,4 +34,4 @@ const errorHandler = (
   });
 };
 
-export { notFound, errorHandler };
+export { errorHandler, notFound };

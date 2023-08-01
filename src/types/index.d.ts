@@ -5,6 +5,7 @@ export interface IUser extends Document {
   name: string;
   email: string;
   password: string;
+  role: string;
 }
 
 export interface UserDocument extends IUser, Document {
@@ -23,13 +24,23 @@ export interface ILoggedInUser {
 }
 
 export interface IProduct {
-  id: string;
+  _id?: string;
   name: string;
   originalQuantity: number;
   remainingQuantity: number;
+  imageFile: string;
+  sellerId: ObjectId;
+  price: number;
+  status: "ACTIVE" | "INACTIVE";
 }
 
 export interface IOrder {
-  orderNumber: number;
-  product: ObjectId;
+  orderNumber?: string;
+  buyerId: ObjectId;
+  productId: ObjectId;
+  quantity: number;
+  sellerId: ObjectId;
+  totalAmount:number
+  status: "ACTIVE" | "INACTIVE";
+  paymentStatus: "DONE" | null;
 }
