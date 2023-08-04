@@ -9,3 +9,5 @@ yarn.lock
 # production
 /build
 /dist
+# Local Netlify folder
+.netlify

@@ -19,6 +19,7 @@ const registerUser = asyncHandler(async (request, response) => {
     const token = generateToken({
       userId: createdUser._id,
       email: createdUser.email,
+      name: createdUser.name,
       role: createdUser.role,
     });
     response.status(HttpStatusCode.POST_OK).json({
@@ -47,6 +48,7 @@ const authUser = asyncHandler(async (request: any, response) => {
     const token = generateToken({
       userId: user._id,
       email: user.email,
+      name: user.name,
       role: user.role,
     });
     response.status(HttpStatusCode.POST_OK).json({
@@ -92,6 +94,7 @@ const updateProfile = asyncHandler(async (request: any, response) => {
     const token = generateToken({
       userId: updatedUser._id,
       email: updatedUser.email,
+      name: updatedUser.name,
       role: updatedUser.role,
     });
     response.status(200).json({ updatedUser, token });
